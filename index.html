@@ -163,18 +163,28 @@ img{max-width:100%}
   background:linear-gradient(180deg,rgba(15,19,15,.08) 0%,rgba(15,19,15,.18) 34%,rgba(15,19,15,.78) 100%);
   transition:background .7s ease, transform 1.1s cubic-bezier(.2,.7,.2,1);
 }
-.tier-card.tier-luxury,
+.tier-card.tier-luxury{
+  background-size:cover;
+  background-position:68% top;
+}
+@media (width > 850px) and (prefers-reduced-motion:no-preference){
+  .tier-card.tier-luxury{animation:luxuryPhotoPan 18s ease-in-out infinite alternate}
+}
+@keyframes luxuryPhotoPan{
+  from{background-position:66% top}
+  to{background-position:70% top}
+}
 .tier-card.tier-ultra{
   background-size:110% 110%;
   animation:tierImageBreath 18s ease-in-out infinite alternate;
 }
 .tier-card.tier-ultra{animation-delay:-8s}
-.tier-card.tier-luxury:hover,
 .tier-card.tier-ultra:hover{
   background-size:118% 118%;
   background-position:52% 48%;
   box-shadow:0 24px 55px rgba(20,24,18,.22);
 }
+.tier-card.tier-luxury:hover{box-shadow:0 24px 55px rgba(20,24,18,.22)}
 .tier-card.tier-luxury:hover:before,
 .tier-card.tier-ultra:hover:before{
   background:linear-gradient(180deg,rgba(15,19,15,.02) 0%,rgba(15,19,15,.14) 28%,rgba(15,19,15,.84) 100%);
@@ -629,7 +639,7 @@ button,a[role=button],.premium-view-btn,.villa-location-btn{min-height:44px}
 </div>
 <div class="tier-grid">
 <article aria-label="Open Premium villa collection" class="tier-card reveal" data-collection-target="#premium-villas" role="link" style="background-image: url('assets/images/2d36588da3808269dafa.png'); background-size: cover; background-position: center;" tabindex="0"> <div class="tier-content"><div class="tier-number">01 / THE COLLECTION</div><h3>Premium</h3><p>Comfort-led spaces for easy getaways and time well spent.</p><a class="tier-link" href="#premium-villas" id="premiumExplore">Explore Premium <span></span></a></div></article>
-<article aria-label="Open Luxury villa collection" class="tier-card reveal tier-luxury" data-collection-target="#luxury-villas" role="link" style="background-image:url('assets/images/b770c43f22ad45ffad5d.webp')" tabindex="0"><div class="tier-content"><div class="tier-number">02 / THE COLLECTION</div><h3>Luxury</h3><p>Elevated details, generous spaces and a little more indulgence.</p><a class="tier-link" href="#luxury-villas" id="luxuryExplore">Explore Luxury <span></span></a></div></article>
+<article aria-label="Open Luxury villa collection" class="tier-card reveal tier-luxury" data-collection-target="#luxury-villas" role="link" style="background-image:url('assets/images/luxury-collection-castle.png')" tabindex="0"><div class="tier-content"><div class="tier-number">02 / THE COLLECTION</div><h3>Luxury</h3><p>Elevated details, generous spaces and a little more indulgence.</p><a class="tier-link" href="#luxury-villas" id="luxuryExplore">Explore Luxury <span></span></a></div></article>
 <article aria-label="Open Ultra Luxury villa collection" class="tier-card reveal tier-ultra" data-collection-target="#ultra-luxury-villas" role="link" style="background-image:url('assets/images/9a833a824d3ba51148de.png')" tabindex="0"><div class="tier-content"><div class="tier-number">03 / THE COLLECTION</div><h3>Ultra Luxury</h3><p>Our most considered escape, designed for exceptional stays.</p><a class="tier-link" href="#ultra-luxury-villas" id="ultraExplore">Explore Ultra Luxury <span></span></a></div></article>
 </div>
 <p class="note reveal">Villa names, individual photographs, facilities and category-wise availability can be added once the details of all thirteen villas are confirmed.</p>
