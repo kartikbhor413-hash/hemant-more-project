@@ -421,13 +421,21 @@ button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
 a,button{touch-action:manipulation}
 :focus-visible{outline:3px solid #c99553!important;outline-offset:3px}
 @media (hover:hover){a,button{transition-duration:.2s}}
+@media(max-width:850px){
+ .nav-links{
+  max-height:calc(100svh - 84px);
+  overflow-y:auto;
+  overscroll-behavior-y:contain;
+ }
+ .nav-links a{min-height:44px}
+}
 @media(max-width:767px){
  html{scroll-padding-top:72px}
  body{font-size:15px;line-height:1.55}
  .nav{padding:13px 17px;gap:12px}
  .brand{min-width:0}
  .nav-links{max-width:100vw}
- .hero{min-height:100svh;min-height:100dvh;padding-inline:18px}
+ .hero{min-height:100svh;padding-inline:18px}
  .hero-content,.hero-inner{width:100%;max-width:100%;padding-inline:0}
  .hero h1{font-size:clamp(42px,11vw,68px);line-height:1.02;overflow-wrap:normal}
  .hero p{font-size:clamp(13px,3.7vw,16px);line-height:1.75}
