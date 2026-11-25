@@ -8,10 +8,9 @@ Original image assets preserved byte-for-byte (SHA-256 checked). No photographs 
 - Swapnkiran Villa — 8 members — ₹25,000
 - Beze Villa — 8 members — ₹18,000 (moved from Luxury)
 
-## Luxury (3)
+## Luxury (2)
 - Bandish Villa — 12 members — ₹30,000
 - Manas Villa — 12 members — ₹40,000
-- The Rice Villa — 12 members — ₹35,000
 
 ## Ultra Luxury (6)
 - Serivaas | The Lakeview Estate — 15 members — ₹60,000
