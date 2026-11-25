@@ -5,7 +5,7 @@ This is a static conversion of the original Mango Stay website, preserving the o
 ## Deploy with GitHub + Cloudflare Pages
 1. Push the **contents** of this folder to your GitHub repository.
 2. In Cloudflare Pages, import the repository, use `main` as production branch, no framework and no build command; publish the repository root (`.`).
-3. Test all 13 villas and booking buttons on the generated pages.dev URL before connecting a custom domain.
+3. Test all 12 villas and booking buttons on the generated pages.dev URL before connecting a custom domain.
 4. Add the domain through Pages > Custom domains, then follow the DNS instructions.
 
 ## Local preview
