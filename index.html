@@ -4437,6 +4437,201 @@
       background: var(--stone)
     }
 
+    @media (768px <= width < 1024px) {
+      .dir-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .dir-foot {
+        flex-wrap: wrap
+      }
+
+      .dir-preview-btn,
+      .dir-link {
+        min-height: 44px
+      }
+    }
+
+    @media (width < 768px) {
+      .villa-directory-sec {
+        --directory-violet: #35144F;
+        --directory-border: #E5E0EA;
+        --directory-action-size: 11px;
+        background: #F7F6F8;
+        color: #141019;
+        padding-inline: 12px;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%
+      }
+
+      .dir-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px
+      }
+
+      .dir-card {
+        display: grid;
+        grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+        min-height: 144px;
+        border-color: var(--directory-border);
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgb(53 20 79 / 5%)
+      }
+
+      .dir-card:hover {
+        transform: none;
+        box-shadow: 0 2px 8px rgb(53 20 79 / 5%)
+      }
+
+      .dir-thumb {
+        aspect-ratio: auto
+      }
+
+      .dir-thumb > a {
+        position: absolute;
+        inset: 0
+      }
+
+      .dir-card:hover .dir-thumb img {
+        transform: none
+      }
+
+      .dir-badge {
+        top: 8px;
+        left: 8px;
+        padding: 4px 8px;
+        background: var(--directory-violet);
+        backdrop-filter: none;
+        color: #fff;
+        font-size: 9px;
+        line-height: 1.2;
+        letter-spacing: .05em;
+        pointer-events: none
+      }
+
+      .dir-body {
+        min-width: 0;
+        justify-content: center;
+        padding: 10px;
+        gap: 4px
+      }
+
+      .dir-title {
+        color: #141019;
+        font: 600 17px/1.12 var(--serif);
+        overflow-wrap: anywhere
+      }
+
+      .dir-meta {
+        color: #77727E;
+        font-size: 11px;
+        line-height: 1.35
+      }
+
+      .dir-foot {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 5px;
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0
+      }
+
+      .dir-price {
+        color: var(--directory-violet);
+        font: 700 18px/1.15 var(--sans)
+      }
+
+      .dir-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px
+      }
+
+      .dir-preview-btn,
+      .dir-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        min-width: 0;
+        padding: 4px 5px;
+        border: 1px solid var(--directory-violet);
+        font: 600 var(--directory-action-size)/1.15 var(--sans);
+        letter-spacing: normal;
+        text-align: center;
+        text-transform: none;
+        white-space: nowrap;
+        transition: background-color .18s ease, color .18s ease
+      }
+
+      .dir-preview-btn {
+        background: transparent;
+        color: var(--directory-violet);
+        font-size: var(--directory-action-size) !important
+      }
+
+      .dir-preview-btn:hover {
+        border-color: var(--directory-violet);
+        background: #F7F6F8
+      }
+
+      .dir-link {
+        background: var(--directory-violet);
+        color: #fff
+      }
+
+      .dir-link:hover {
+        background: #4B2467;
+        color: #fff
+      }
+
+      .dir-card :is(a, button):focus-visible {
+        outline: 2px solid var(--directory-violet);
+        outline-offset: 2px
+      }
+
+      .dir-thumb > a:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: -4px
+      }
+    }
+
+    @media (width < 360px) {
+      .dir-actions {
+        grid-template-columns: minmax(0, 1fr)
+      }
+    }
+
+    @media (480px < width < 768px) {
+      .villa-directory-sec {
+        --directory-action-size: 12px
+      }
+
+      .dir-card {
+        min-height: 164px
+      }
+
+      .dir-meta {
+        font-size: 12px
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .dir-card,
+      .dir-thumb img,
+      .dir-tab,
+      .dir-preview-btn,
+      .dir-link {
+        transition: none
+      }
+
+      .dir-card:hover,
+      .dir-card:hover .dir-thumb img {
+        transform: none
+      }
+    }
+
     .exp-strip {
       margin-top: 34px;
       padding-top: 26px;
@@ -5029,157 +5224,145 @@
         <div class="dir-grid">
           <article class="dir-card" data-tier="premium">
             <div class="dir-thumb"><a href="villas/villa-01.html"><img
-                  alt="The Mango Stay 3 BHK private pool villa in Nashik" loading="lazy"
+                  alt="The Mango Stay 3 BHK private pool villa in Nashik" loading="lazy" decoding="async"
                   src="assets/images/20ce8dd941480b07ac27.webp" /></a><span class="dir-badge">Premium</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-01.html">The Mango Stay</a></h4>
               <div class="dir-meta">3 BHK · Pool &amp; Garden · Up to 8 Members</div>
               <div class="dir-foot"><span class="dir-price">₹12,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="0" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-01.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="0" type="button">Quick View</button><a class="dir-link" href="villas/villa-01.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="premium">
             <div class="dir-thumb"><a href="villas/villa-03.html"><img
-                  alt="Nature Villa 5 BHK private pool and garden villa" loading="lazy"
+                  alt="Nature Villa 5 BHK private pool and garden villa" loading="lazy" decoding="async"
                   src="assets/images/4e8ae5a1401834c583e0.webp" /></a><span class="dir-badge">Premium</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-03.html">Nature Villa</a></h4>
               <div class="dir-meta">5 BHK · Pool &amp; Garden · Up to 8 Members</div>
               <div class="dir-foot"><span class="dir-price">₹20,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="2" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-03.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="2" type="button">Quick View</button><a class="dir-link" href="villas/villa-03.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="premium">
             <div class="dir-thumb"><a href="villas/villa-04.html"><img alt="Swapnkiran Villa 4 BHK private pool villa"
-                  loading="lazy" src="assets/images/b715f2e1810bdb0ecd0d.webp" /></a><span
+                  loading="lazy" decoding="async" src="assets/images/b715f2e1810bdb0ecd0d.webp" /></a><span
                 class="dir-badge">Premium</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-04.html">Swapnkiran Villa</a></h4>
               <div class="dir-meta">4 BHK · Pool &amp; Garden · Up to 8 Members</div>
               <div class="dir-foot"><span class="dir-price">₹25,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="3" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-04.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="3" type="button">Quick View</button><a class="dir-link" href="villas/villa-04.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="premium">
             <div class="dir-thumb"><a href="villas/villa-06.html"><img
-                  alt="Beze Villa 3 BHK private pool villa with terrace" loading="lazy"
+                  alt="Beze Villa 3 BHK private pool villa with terrace" loading="lazy" decoding="async"
                   src="assets/images/a27639cc869bf17fb780.webp" /></a><span class="dir-badge">Premium</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-06.html">Beze Villa</a></h4>
               <div class="dir-meta">3 BHK · Pool &amp; Lawn · Up to 8 Members</div>
               <div class="dir-foot"><span class="dir-price">₹18,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="5" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-06.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="5" type="button">Quick View</button><a class="dir-link" href="villas/villa-06.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="luxury">
             <div class="dir-thumb"><a href="villas/villa-05.html"><img
-                  alt="Bandish Villa 4 BHK luxury private pool retreat" loading="lazy"
+                  alt="Bandish Villa 4 BHK luxury private pool retreat" loading="lazy" decoding="async"
                   src="assets/images/40d5a1cbc07a98ec6cbc.webp" /></a><span class="dir-badge">Luxury</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-05.html">Bandish Villa</a></h4>
               <div class="dir-meta">4 BHK · Private Pool · Up to 12 Members</div>
               <div class="dir-foot"><span class="dir-price">₹30,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="4" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-05.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="4" type="button">Quick View</button><a class="dir-link" href="villas/villa-05.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="luxury">
             <div class="dir-thumb"><a href="villas/villa-07.html"><img alt="Manas Villa 4 BHK luxury garden retreat"
-                  loading="lazy" src="assets/images/ef1da2da299acacb376c.webp" /></a><span
+                  loading="lazy" decoding="async" src="assets/images/ef1da2da299acacb376c.webp" /></a><span
                 class="dir-badge">Luxury</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-07.html">Manas Villa</a></h4>
               <div class="dir-meta">4 BHK · Landscaped Lawn · Up to 12 Members</div>
               <div class="dir-foot"><span class="dir-price">₹40,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="6" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-07.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="6" type="button">Quick View</button><a class="dir-link" href="villas/villa-07.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="ultra">
             <div class="dir-thumb"><a href="villas/villa-02.html"><img
-                  alt="Serivaas The Lakeview Estate ultra luxury villa" loading="lazy"
+                  alt="Serivaas The Lakeview Estate ultra luxury villa" loading="lazy" decoding="async"
                   src="assets/images/4ec3c9cf73216be3be22.webp" /></a><span class="dir-badge">Ultra Luxury</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-02.html">Serivaas | The Lakeview Estate</a></h4>
               <div class="dir-meta">Private Pool · Lakeview · Up to 15 Members</div>
               <div class="dir-foot"><span class="dir-price">₹60,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="1" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-02.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="1" type="button">Quick View</button><a class="dir-link" href="villas/villa-02.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="ultra">
             <div class="dir-thumb"><a href="villas/villa-09.html"><img
-                  alt="APB1 Villa 4 BHK ultra luxury private retreat" loading="lazy"
+                  alt="APB1 Villa 4 BHK ultra luxury private retreat" loading="lazy" decoding="async"
                   src="assets/images/5931f12675a76f7859a0.webp" /></a><span class="dir-badge">Ultra Luxury</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-09.html">APB1 Villa</a></h4>
               <div class="dir-meta">4 BHK · Private Pool · Up to 10 Members</div>
               <div class="dir-foot"><span class="dir-price">₹35,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="8" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-09.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="8" type="button">Quick View</button><a class="dir-link" href="villas/villa-09.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="ultra">
             <div class="dir-thumb"><a href="villas/villa-10.html"><img alt="APB2 Villa 5 BHK ultra luxury private villa"
-                  loading="lazy" src="assets/images/84f61853509902b659e2.webp" /></a><span class="dir-badge">Ultra
+                  loading="lazy" decoding="async" src="assets/images/84f61853509902b659e2.webp" /></a><span class="dir-badge">Ultra
                 Luxury</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-10.html">APB2 Villa</a></h4>
               <div class="dir-meta">5 BHK · Private Pool · Up to 15 Members</div>
               <div class="dir-foot"><span class="dir-price">₹55,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="9" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-10.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="9" type="button">Quick View</button><a class="dir-link" href="villas/villa-10.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="ultra">
             <div class="dir-thumb"><a href="villas/villa-11.html"><img
-                  alt="APB3 Villa 7 BHK ultra luxury estate with pool" loading="lazy"
+                  alt="APB3 Villa 7 BHK ultra luxury estate with pool" loading="lazy" decoding="async"
                   src="assets/images/f38444281872a51c1817.webp" /></a><span class="dir-badge">Ultra Luxury</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-11.html">APB3 Villa</a></h4>
               <div class="dir-meta">7 BHK · Pool &amp; Games Lounge · Up to 15 Members</div>
               <div class="dir-foot"><span class="dir-price">₹75,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="10" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-11.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="10" type="button">Quick View</button><a class="dir-link" href="villas/villa-11.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="ultra">
             <div class="dir-thumb"><a href="villas/villa-12.html"><img
-                  alt="APB4 Villa 7 BHK ultra luxury villa with garden" loading="lazy"
+                  alt="APB4 Villa 7 BHK ultra luxury villa with garden" loading="lazy" decoding="async"
                   src="assets/images/83850a82bc388278f7c0.webp" /></a><span class="dir-badge">Ultra Luxury</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-12.html">APB4 Villa</a></h4>
               <div class="dir-meta">7 BHK · Garden &amp; Lounge · Up to 15 Members</div>
               <div class="dir-foot"><span class="dir-price">₹75,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="11" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-12.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="11" type="button">Quick View</button><a class="dir-link" href="villas/villa-12.html">Full Page</a></div>
               </div>
             </div>
           </article>
           <article class="dir-card" data-tier="ultra">
             <div class="dir-thumb"><a href="villas/villa-13.html"><img
-                  alt="APB5 Villa 5 BHK ultra luxury private pool retreat" loading="lazy"
+                  alt="APB5 Villa 5 BHK ultra luxury private pool retreat" loading="lazy" decoding="async"
                   src="assets/images/de83f63720385b56f38e.webp" /></a><span class="dir-badge">Ultra Luxury</span></div>
             <div class="dir-body">
               <h4 class="dir-title"><a href="villas/villa-13.html">APB5 Villa</a></h4>
               <div class="dir-meta">5 BHK · Private Pool · Up to 12 Members</div>
               <div class="dir-foot"><span class="dir-price">₹55,000</span>
-                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="12" type="button">Quick
-                    View</button><a class="dir-link" href="villas/villa-13.html">Full Page</a></div>
+                <div class="dir-actions"><button class="dir-preview-btn" data-open-villa="12" type="button">Quick View</button><a class="dir-link" href="villas/villa-13.html">Full Page</a></div>
               </div>
             </div>
           </article>
