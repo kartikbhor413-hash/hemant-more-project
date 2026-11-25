@@ -1,0 +1,7 @@
+/.git
+/.gitignore
+/.assetsignore
+/README.md
+/PRICE_UPDATE_NOTES.md
+/PHOTO_SHA256_MANIFEST.json
+/wrangler.jsonc
